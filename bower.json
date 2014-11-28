@@ -1,0 +1,17 @@
+{
+  "name": "ymbb",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.0",
+    "modernizr": "~2.7.1",
+    "Bootflat": "~2.0.4",
+    "flatstrap": "~3.1.2",
+    "components-font-awesome": "~4.2.0",
+    "jquery.scrollTo": "~1.4.14",
+    "backbone-modal": "~1.1.2"
+  },
+  "devDependencies": {}
+}

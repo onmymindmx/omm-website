@@ -1,0 +1,298 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+@import 'Bootflat/bootflat/scss/bootflat.scss';
+@import 'components-font-awesome/scss/font-awesome.scss';
+
+/* Colores */
+$nav-color: #263238;
+$navbar-brand-hover-color: #B0BEC5;
+$nav-color-border: #90A4AE;
+$bg-color: #F9F9F9;
+$navbar-toggle-color: #455A64;
+$navbar-toggle-hover-color: #607D8B;
+$font-color: #424242;
+$fb-color: #425F9F;
+$tw-color: #50ABF1;
+$g-plus-color: #D93B2B;
+
+body{
+    background-color: $bg-color;
+    color: $font-color;
+    padding-top: 51px;
+
+}
+p{
+    font-size: 16px;
+}
+body, h1, h2, h3, h4, h5, h6, {
+    font-weight: 300;
+}
+
+strong{
+    font-weight: 400;
+}
+/* Navbar */
+.navbar-custom{
+    background-color: $nav-color;
+    border-color: $nav-color-border;
+    margin-bottom: 0px;
+    
+    .navbar-brand{
+        color: $bg-color;
+    }
+    .navbar-brand:hover{
+        color: $navbar-brand-hover-color;
+    }
+
+    .navbar-toggle{
+        border-color: $navbar-toggle-color;
+        background-color: $navbar-toggle-color;
+        .icon-bar{
+            background-color: $bg-color;
+        }
+    }
+
+    .navbar-toggle:hover{
+        background-color: $navbar-toggle-hover-color;
+        border-color: $navbar-toggle-hover-color;
+    }
+
+    .navbar-nav > li {
+        a{
+            color:$bg-color;
+        }
+        a:hover{
+            color: $navbar-brand-hover-color;
+        }
+    }
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: $nav-color-border;
+}
+.navbar-default .navbar-toggle:focus{
+    background-color: $navbar-toggle-hover-color;
+    border-color: $navbar-toggle-hover-color;
+}
+
+@media (max-width: 767px){
+    .navbar-default .navbar-nav > li > a:hover{
+        background-color: $navbar-toggle-color;
+    }
+}
+
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%9 !important;
+}
+
+/* fullscreen setup */
+html, body {
+    /* give this to all tags from html to .fullscreen */
+    height:100%;
+}
+.fullscreen,
+.content-a {
+    width:100%;
+    min-height:480px;
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+    height:480px;
+    overflow:hidden;
+    color: $bg-color;
+}
+
+/* content centering styles */
+.content-a {
+    display:table;
+}
+.content-b {
+    display:table-cell;
+    position:relative;
+    vertical-align:middle;
+    h1{
+        color: $bg-color;
+    }
+    strong{
+        color: $navbar-brand-hover-color;
+    }
+}
+
+#redes-sociales{
+    padding: 20px;
+    #social-networks{
+        text-align: center;
+        font-size: 2em;
+        a{
+            color: $font-color;
+        }
+        i{
+            padding: 1em;
+            border: 2px solid black;
+            border-radius: 120px;
+            width: 88px;
+        }
+        .fa-facebook:hover{
+            color: $fb-color;
+            border-color: $fb-color;
+        }
+        .fa-twitter:hover{
+            color: $tw-color;
+            border-color: $tw-color;
+        }
+        .fa-google-plus:hover{
+            color: $g-plus-color;
+            border-color: $g-plus-color;
+        }
+
+        .fa-twitter, .fa-google-plus, .fa-facebook{
+            -webkit-transition-property: color, border-color;
+            -moz-transition-property: color, border-color;
+            -o-transition-property: color, border-color;
+            -ms-transition-property: color, border-color;
+            transition-property: color, border-color;
+
+            -webkit-transition-duration: 500ms;
+            -moz-transition-duration: 500ms;
+            -o-transition-duration: 500ms;
+            -ms-transition-duration: 500ms;
+            transition-duration: 500ms;
+        }
+    }
+}
+
+#services, #nosotros, #portafolio{
+    h2{
+        border-left: 10px solid $nav-color;
+        padding-left: 5px;
+    }
+}
+
+#services{
+    .service{
+        h2{
+            border-left: 0px;
+            padding-left: 0px;    
+        }
+        height: 160px;
+        text-align: center;
+    }
+    .call2action{
+        text-align: center;
+        display: none;
+    }
+    .col-md-4:hover{
+        background-color:#F5F5F5;
+    }
+    .col-md-4{
+        padding-bottom: 20px;
+    }
+}
+
+#nosotros{
+    #fotos{
+        text-align: center;
+        img{
+            height: 200px;
+            width: 200px;
+
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+
+        }
+        img:hover{
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+    }
+}
+
+#portafolio{
+    .trabajo{
+        text-align: center;
+        #portfolio{
+            .carousel-control.right, .carousel-control.left{
+                background: rgba(255,255,255,0);
+                p{
+                    position:absolute;
+                    top: 50%;
+                    display: inline-block;
+                    font-size: 50px;
+                    font-weight:100;
+                }
+            }
+        }
+    }
+}
+#contacto{
+    
+    background-color: $nav-color;
+    color: $bg-color;
+    h2{
+        border-left: 10px solid $bg-color;
+        padding-left: 5px;
+    }
+    #forma-contacto{
+        padding-bottom: 10px;
+
+        .form-control{
+            border-radius: 0px;
+            border: 1px solid $nav-color;
+            border-bottom: 1px solid #ccc;
+            background-color: $nav-color;
+            color: $bg-color
+        }
+        .form-control:focus{
+            border-bottom-color: #3BAFDA;
+        }
+    }
+}
+
+@media (max-width: 1023px){
+    #contacto{
+        #forma-contacto{
+            #btnsubmit{
+                padding-bottom: 20px;    
+            }
+        }
+    }
+    .content-b{
+        color: $bg-color;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    h3{
+        font-size: 1.6em;
+    }   
+
+    #services{
+        .service{
+            height: 110px;
+        }    
+    }
+    #nosotros{
+        #fotos{
+            margin-top: 15px;
+        }
+    }
+}
+
+
